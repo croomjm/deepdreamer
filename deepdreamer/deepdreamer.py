@@ -37,6 +37,11 @@ def _select_network(netname):
         # ImageNet mean, training set dependent
         CAFFE_MEAN = np.float32([104.0, 116.0, 122.0])
         return NET_FN, PARAM_FN, CHANNEL_SWAP, CAFFE_MEAN
+    elif netname == 'facenet':
+        NET_FN = 'deploy.prototxt'
+        PARAM_FN = 'snapshot_iter_6225.caffemodel'
+        CHANNEL_SWAP = (2,1,0)
+        CAFFE_MEAN = np.float32([85.1, 89.23, 107.78])
     else:
         print("Error: network {} not implemented".format(netname))
 
