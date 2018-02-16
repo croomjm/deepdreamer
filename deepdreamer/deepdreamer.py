@@ -42,6 +42,7 @@ def _select_network(netname):
         PARAM_FN = 'snapshot_iter_6225.caffemodel'
         CHANNEL_SWAP = (2,1,0)
         CAFFE_MEAN = np.float32([85.1, 89.23, 107.78])
+        return NET_FN, PARAM_FN, CHANNEL_SWAP, CAFFE_MEAN
     else:
         print("Error: network {} not implemented".format(netname))
 
