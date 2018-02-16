@@ -37,7 +37,7 @@ def main():
             "--clip", choices=["true", "false"], default="true",
             help="clip dreams (default: true)")
         parser.add_argument(
-            "--network", choices=['bvlc_googlenet', 'googlenet_place205'],
+            "--network", choices=['bvlc_googlenet', 'googlenet_place205', 'facenet'],
             default='bvlc_googlenet',
             help="choose the network to use (default: bvlc_googlenet)")
         parser.add_argument(
